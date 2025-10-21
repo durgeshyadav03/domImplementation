@@ -16,6 +16,13 @@ box4.addEventListener("click", function () {
 });
 
 function displayText() {
-  const text = document.getElementById("inputText").value;
-  document.getElementById("Greet").textContent = "Hello, " + text;
+  const text = document.getElementById("inputText").value.trim();
+  const greetElement = document.getElementById("Greet");
+
+  if (text) {
+    greetElement.textContent = "Hello, " + text;
+  } else {
+    greetElement.textContent = "Hello"; 
+  }
 }
+
